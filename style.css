@@ -21,17 +21,20 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 10;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #splash-screen h1 {
-  font-size: 28px;
+  font-size: 5vw;
   color: white;
   text-shadow: 2px 2px #ffaa00;
   margin-bottom: 10px;
 }
 
 #splash-screen h2 {
-  font-size: 18px;
+  font-size: 3.5vw;
   color: #ffaa00;
   text-shadow: 1px 1px black;
   font-style: italic;
@@ -42,14 +45,15 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 #game-container h1 {
   position: absolute;
-  top: 40px;
+  top: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 28px;
+  font-size: 4vw;
   color: white;
   text-shadow: 2px 2px #ffaa00;
   letter-spacing: 1px;
@@ -57,10 +61,10 @@ body {
 
 #game-container h2 {
   position: absolute;
-  top: 80px;
+  top: 10vh;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 18px;
+  font-size: 2.5vw;
   color: #ffaa00;
   text-shadow: 1px 1px black;
   font-style: italic;
@@ -71,14 +75,16 @@ body {
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px;
+  width: 70vw;
+  max-width: 700px;
   height: auto;
 }
 
 #splash {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 12vw;
+  max-width: 100px;
+  height: auto;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
@@ -86,18 +92,19 @@ body {
 
 #uovo {
   position: absolute;
-  bottom: 30px;
+  bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 10vw;
+  max-width: 80px;
   transition: transform 0.4s ease;
 }
 
 #egg-counter {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 18px;
+  top: 2vh;
+  right: 2vw;
+  font-size: 2vw;
   color: #ffaa00;
   text-shadow: 1px 1px #000;
   background: rgba(0, 0, 0, 0.5);
@@ -107,4 +114,26 @@ body {
 
 .rotate {
   transform: translateX(-50%) rotate(360deg);
+}
+
+@media screen and (max-width: 600px) {
+  #splash-screen h1 {
+    font-size: 7vw;
+  }
+
+  #splash-screen h2 {
+    font-size: 5vw;
+  }
+
+  #egg-counter {
+    font-size: 3.5vw;
+  }
+
+  #game-container h1 {
+    font-size: 6vw;
+  }
+
+  #game-container h2 {
+    font-size: 4vw;
+  }
 }
