@@ -1,82 +1,110 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: url('egg.png') 16 16, auto; /* il cursore è l'uovo */
+  cursor: url('egg.png') 16 16, auto;
   background-color: black;
   overflow: hidden;
-  cursor: url('egg.png') 16 16, auto;
+  font-family: 'Courier New', monospace;
 }
 
-h1 {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Courier New', monospace;
+/* Splash screen iniziale */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#splash-screen h1 {
   font-size: 28px;
   color: white;
   text-shadow: 2px 2px #ffaa00;
-  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
-h2 {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Courier New', monospace;
+#splash-screen h2 {
   font-size: 18px;
   color: #ffaa00;
   text-shadow: 1px 1px black;
   font-style: italic;
 }
 
+/* Gioco visibile dopo il click */
 #game-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#game-container h1 {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: white;
+  text-shadow: 2px 2px #ffaa00;
+  letter-spacing: 1px;
+}
+
+#game-container h2 {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #ffaa00;
+  text-shadow: 1px 1px black;
+  font-style: italic;
 }
 
 #trump {
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: auto;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: auto;
 }
 
 #splash {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
 #uovo {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    transition: transform 0.4s ease;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  transition: transform 0.4s ease;
 }
 
 #egg-counter {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-family: 'Courier New', monospace;
   font-size: 18px;
   color: #ffaa00;
   text-shadow: 1px 1px #000;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 6px 10px;
   border-radius: 6px;
 }
 
 .rotate {
-    transform: translateX(-50%) rotate(360deg);
+  transform: translateX(-50%) rotate(360deg);
 }
